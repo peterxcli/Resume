@@ -1,0 +1,177 @@
+\documentclass[a4paper,20pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\usepackage{xeCJK}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset { %
+    language=C++,
+    backgroundcolor=\color{black!5}, % set backgroundcolor
+    basicstyle=\footnotesize,% basic font setting
+}
+% \setmainfont{新細明體}
+\setCJKmainfont{新細明體}
+
+\XeTeXlinebreaklocale "zh"
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+	\textbf{{\LARGE 李緒成}} & \\\\
+	Email:~~ \href{mailto:}{peterxcli@gmail.com} & Mobile:~~0905648598 \\
+	\href{https://github.com/peterxcli}{Github: ~~github.com/peterxcli} & \href{https://codeforces.com/profile/peterlee}{codeforces: ~~peterlee}\\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{~~Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Lishan Senior High School}{Taipei, Taiwan}
+{}{Sep. 2019 - Jun. 2022}
+
+\resumeSubheading
+{National Cheng Kung University}{Taichung, Taiwan}
+{Computer Science and Information Engineering}{Sep 2022 - Jun. 2026}
+
+\resumeSubHeadingListEnd 
+
+\vspace{-5pt}
+\section{Skills Summary}
+\resumeSubHeadingListStart
+\resumeSubItem{Languages}{~~~~~~Python, C++}
+\resumeSubItem{Frameworks}{~~~~Selenium, Pytorch, OpenCV}
+\resumeSubItem{Tools}{~~~~~~~~~~~~~~Git}
+% \resumeSubItem{Tools}{~~~~~~~~~~~~~~*Kubernetes*, *Docker*, Git, *MongoDB*, *MySQL*}
+\resumeSubItem{Platforms}{~~~~~~~Linux, Windows, Arduino, Jetson, Heroku}
+% \resumeSubItem{Soft Skills}% {~~~~~~~Leadership, Event Management, Writing, Public Speaking, Time Management}
+
+\resumeSubHeadingListEnd
+\vspace{-5pt}
+\section{Experience}
+\
+% \resumeSubHeadingListStart
+% \resumeSubheading{Google Summer of Code - Submitty}{Remote}
+% {Student Developer (Full-time)}{May 2019 - Sep 2019}
+% \resumeItemListStart
+% \resumeItem{Discussion Forum Upgrades}
+% {Refactor forum for performance to handle large databases.}
+% \resumeItem{REST API for Discussion Forum}
+% {Symphony \& Twig based Forum parts converted to API-first interface.}
+% \resumeItem{Ratchet PHP WebSocket}{Implemented a WebSocket for low-latency real time exchange of posts and thread updates.}
+% \resumeItemListEnd
+% \vspace{-5pt}
+% \resumeSubheading
+% {DataCamp Inc.}{Remote}
+% {Instructor (Part-time, Contractual)}{Dec 2018 -  Present}
+% \resumeItemListStart
+% \resumeItem{Project Course - Find Movie Similarity from Plot Summaries}
+% {Created project based course using Unsupervised learning and natural language processing.}
+% \resumeItem{Tutorial - Introduction to Reinforcement Learning}
+% {Created tutorial for Q-learning RL algorithm and  concepts.}
+% \resumeItem{Impact}{Course has been taken by 250+ students so far with 4.65 average rating.}
+% \resumeItemListEnd
+
+% \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\vspace{-5pt}
+\section{Projects}
+
+\resumeSubHeadingListStart
+\resumeSubItem{Reinforcement Learning based active-suspension system (Reinforcement Learning)}{apply AI model on suspension system.
+Tech: python, pytorch, Jetson nano}{\href{https://github.com/peterxcli/active-suspension}{\textcolor{blue}{(link)}}}
+\vspace{2pt}
+
+\resumeSubItem{Discord Bot with multiple functions}{poll, chat, reminder setting and video or audio download features. 
+Tech : Attention Mechanism, python, pytorch, Discord API, plug-in architecture}
+{\href{https://github.com/peterxcli/Discord_life_assistant}{\textcolor{blue}{(link)}}}
+\vspace{2pt}
+
+\resumeSubItem{Google Meet auto attend}{use selenium control the chromedriver to auto detect the chat box and reply.
+ Tech: python, Selenium}
+{\href{https://github.com/peterxcli/googleMeetAutoAttend}{\textcolor{blue}{(link)}}}
+\vspace{2pt}
+
+\resumeSubHeadingListEnd
+\vspace{-5pt}
+%-----------Awards-----------------
+\section{Honors and Awards}
+\begin{description}[font=$\bullet$]
+	\item {Taiwan olympic information Entrance Exam rank $55^{th}$ (quota : 30), 2022}
+	      \vspace{-5pt}
+	\item {Taipei High School Competitive Programming Contest - Honorable Mention, 2020}
+
+\end{description}
+
+
+\end{document}
